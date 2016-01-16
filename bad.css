@@ -1,0 +1,209 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    align-content: center;
+    -webkit-align-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    
+    
+/* STICKY FOOTER */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    background: url('http://static.tumblr.com/5dbmz7d/4stnme4b3/photocopy.png') fixed repeat;
+    background-size: cover;
+}
+
+wrapper { 
+  min-width: 100px;
+  max-width: 1080px;
+  min-height: calc(690px * (90/150));
+  height: 90vh;
+  width: 68vh;
+}
+
+#cover {
+  display:block;
+    padding: 5px;
+    flex: 0 1;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  cursor:pointer;
+
+/* ANIMATION */
+    -webkit-animation: fadeInRight 1s;
+     -moz-animation: fadeInRight 1s;
+      -ms-animation: fadeInRight 1s;
+       -o-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+  }
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+
+/* ANIMATION */
+    -webkit-animation: fadeInRight 1s; 
+     -moz-animation: fadeInRight 1s; 
+      -ms-animation: fadeInRight 1s; 
+       -o-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+}
+
+.active-slide {
+    display: block;
+}
+
+#title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    width: 40%;
+    height: auto;
+}
+
+.float {
+    width: 100%;
+    height: auto;
+    
+ /* ANIMATION */
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0); 
+}
+
+
+footer {
+    align-self: flex-end;
+    background: #eee;
+    border-radius: 0px;
+    width: 100%;
+    height: 12vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+}
+
+#player {
+    margin: 0 auto;
+    max-width: 540px;
+    width: 100%;
+    height: auto;
+}
+
+.tdlarge-6 {
+    width: 100% !important;
+}
+
+
+/* ----------- ANIMATION ----------- */
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    60% {-webkit-transform:translate(0, 8px);}
+    to {-webkit-transform: translate(0, -0px);}
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    60% {-moz-transform:translate(0, 8px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+
+
+/* ----------- MOBILE ----------- */
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 1020px){
+
+  }
+
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 760px){
+
+      .title {
+            width: 65%;
+            height: auto;
+        }
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+      wrapper {width: 54vh;}
+      footer {height: 18vh;}
+      
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+      wrapper {width: 56vh;}
+      footer {height: 18vh;}
+}
+
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    
+      wrapper {width: 60vh;}
+      footer {height: 18vh;}
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      
+      wrapper {width: 64vh;}
+      footer {height: 18vh;}
+}
+
+@media only screen 
+  and (min-device-width: 640px) 
+  and (max-device-width: 960px) {
+
+      wrapper{width:64vh;}
+      footer {height: 18vh;}
+}

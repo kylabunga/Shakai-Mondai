@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title>Shakai Mondai: Bad EP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bad.css" />
+	<link rel="stylesheet" href="player.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-git.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".float").css("display", "none");
+			$(".float").fadeIn(1200);
+			$("a.transition").click(function(event) {
+				event.preventDefault();
+				linkLocation = this.href;
+				$(".float").fadeOut(1000, redirectPage);
+			});
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".title").css("display", "none");
+			$(".title").fadeIn(2600);
+			$("a.transition").click(function(event) {
+				event.preventDefault();
+				linkLocation = this.href;
+				$(".none").fadeOut(2600, redirectPage);
+			});
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+	</script>
+
+</head>
+
+<body>
+	<wrapper>
+		<div id="cover">
+			<div class="slider">
+
+     			 <div class="slide active-slide">
+            		<img class="float" src="island.png">
+           		</div>
+           
+           		<div class="slide">
+           			<img class="float" src="acorn_1.png">
+           		</div>
+           
+          		 <div class="slide">
+           			<img class="float" src="acorn_2.png">
+           		</div>
+           
+           		<div class="slide">
+           			<img class="float" src="acorn_3.png">
+           		</div>
+           </div>
+        </div> <!--END-COVER-->
+
+        <div id="title">
+        	<img class="title" src="title.png"> 
+        </div>
+
+    </wrapper>
+
+	<footer>
+		<div id="player"></div>
+   		<script src="toneden.js"></script>
+	</footer>
+</body>
+</html>
